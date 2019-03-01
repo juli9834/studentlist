@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student List</title>
+  <link rel="stylesheet" href="studentlist.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Tangerine:400,700" rel="stylesheet" />
+</head>
+
+<body>
+  <h1>Students 1991</h1>
+
+  <div class="dropdown s">
+    <button class="dropbtn dropdown_sort">
+      <p>Sort</p>
+    </button>
+    <div class="dropdown-content">
+      <p class="sort_button" data-action="firstname">First name</p>
+      <p class="sort_button" data-action="lastname">Last name</p>
+      <p class="sort_button" data-action="house">House</p>
+    </div>
+  </div>
+
+  <div class="dropdown f">
+    <button class="dropbtn dropdown_filter">
+      <p>Filter</p>
+    </button>
+    <div class="dropdown-content">
+      <p class="filter_button" data-action="all">All</p>
+      <p class="filter_button" data-action="Hufflepuff">Hufflepuff</p>
+      <p class="filter_button" data-action="Gryffindor">Gryffindor</p>
+      <p class="filter_button" data-action="Ravenclaw">Ravenclaw</p>
+      <p class="filter_button" data-action="Slytherin">Slytherin</p>
+    </div>
+  </div>
+
+  <div class="counters">
+    <p class="total_amount">Students</p>
+    <p class="expelled_amount"></p>
+    <p class="hufflepuff_amount">Hufflepuff-students:</p>
+    <p class="gryffindor_amount">Gryffindor-students:</p>
+    <p class="ravenclaw_amount">Ravenclaw-students:</p>
+    <p class="slytherin_amount">Slytherin-students:</p>
+  </div>
+  <ul id="dest"></ul>
+  <template class="temp">
+    <li>
+      <h2>
+        <span class="data-firstname"></span>
+        <span class="data-lastname"></span>
+      </h2>
+      <p class="data-house"></p>
+      <button class="expell_button" data-action="expell">
+        Expell student!
+      </button>
+    </li>
+  </template>
+
+  <section class="modal" data-action="close_modal">
+    <div class="modal_content">
+      <p class="close" data-action="close_modal">X</p>
+      <img class="student_picture" src="" alt="" />
+      <div class="details">
+        <p class="firstname"></p>
+        <p class="lastname"></p>
+        <p class="bloodstatus"></p>
+      </div>
+      <img class="crest" src="" alt="" />
+      <button class="inquisitorial_button" data-action="add_inquisitorial">
+        Add to inquisitorial squad!
+      </button>
+    </div>
+  </section>
+  <div class="denied_box" data-action="close_denied_box">
+    <div class="denied_box_content">
+      <p class="close" data-action="close_denied_box">X</p>
+      <h2>DENIED!</h2>
+    </div>
+  </div>
+  </div>
+  <script src="studentlist.js"></script>
+</body>
+
+</html>
